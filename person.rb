@@ -6,3 +6,15 @@
 # call the appropriate methods and return pssible email addresses for that person 
 # e.g. if the domain matches 'google.com', call the two methods/algorithms google is using 
 # in case the domain is not in the sample dataset (e.g. 'whitehouse.gov') return an error message 
+
+class Person
+
+  attr_accessor :first_name
+  attr_accessor :last_name
+  attr_accessor :domain
+
+  def predict_email
+    self.first_name.downcase + "." + self.last_name.downcase + "@" + self.domain.downcase
+  end
+
+end
