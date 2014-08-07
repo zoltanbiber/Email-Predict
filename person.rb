@@ -7,6 +7,15 @@
 # e.g. if the domain matches 'google.com', call the two methods/algorithms google is using 
 # in case the domain is not in the sample dataset (e.g. 'whitehouse.gov') return an error message 
 
+sample_dataset = {
+  "John Ferguson" => "john.ferguson@alphasights.com",
+  "Damon Aw" => "damon.aw@alphasights.com",
+  "Linda Li" => "linda.li@alphasights.com",
+  "Larry Page" => "larry.p@google.com",
+  "Sergey Brin" => "s.brin@google.com",
+  "Steve Jobs" => "s.j@apple.com"
+}
+
 class Person
 
   attr_accessor :first_name
