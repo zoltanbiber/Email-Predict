@@ -23,7 +23,6 @@ to_predict = {
 }
 
 class Person
-
   attr_accessor :first_name
   attr_accessor :last_name
   attr_accessor :domain
