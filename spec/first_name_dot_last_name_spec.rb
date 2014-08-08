@@ -1,13 +1,14 @@
 require 'spec_helper'
+require 'pry'
 
 describe FirstNameDotLastName do
   
   before do
-    p = Person.new
-    p.first_name = "Peter"
-    p.last_name = "Wong"
-    p.domain = "alphasights.com"
-    @initial = FirstNameDotLastName.new(p)
+    @p = Person.new
+    @p.first_name = "Peter"
+    @p.last_name = "Wong"
+    @p.domain = "alphasights.com"
+    @initial = FirstNameDotLastName.new(@p)
   end
 
   describe "#email" do

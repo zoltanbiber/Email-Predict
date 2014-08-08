@@ -13,7 +13,6 @@ describe Person do
     it "should predict email based on person's name and domain" do
       expect(@peter.predict_email).to eq("peter.wong@alphasights.com")
     end
-
   end
 
   describe "Craig Silverstein" do
@@ -27,7 +26,6 @@ describe Person do
     it "should predict email based on person's name and domain" do
       expect(@craig.predict_email).to eq(["craig.s@google.com", "c.silverstein@google.com"])
     end
-
   end
 
   describe "Steve Wozniak" do
@@ -41,7 +39,6 @@ describe Person do
     it "should predict email based on person's name and domain" do
       expect(@steve.predict_email).to eq("s.w@apple.com")
     end
-
   end
 
   describe "Barack Obama" do
@@ -55,7 +52,6 @@ describe Person do
     it "should predict email based on person's name and domain" do
       expect {@barack.predict_email}.to raise_error("Sorry, we don't have any person with this company domain in our system so we can't efficiently predict their email address.")
     end
-
   end
 
 
