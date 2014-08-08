@@ -19,8 +19,8 @@ describe Pattern do
 
   describe "google.com" do
     it "should use the two right algorithms" do
-      expect(Pattern.for_person(@craig)).to be_an_instance_of(FirstNameDotLastInitial)
-      expect(Pattern.for_person(@craig)).to be_an_instance_of(FirstInitialDotLastName)
+      expect(Pattern.for_person(@craig)).to be_an_instance_of(FirstNameDotLastInitial, FirstInitialDotLastName)
+      # expect(Pattern.for_person(@craig)).to be_an_instance_of(FirstInitialDotLastName)
     end
   end
 
@@ -32,7 +32,7 @@ describe Pattern do
 
   describe "whitehouse.gov" do
     it "should throw an error message" do
-      expect(Pattern.for_person(@barack)).to raise_error("Sorry, we don't have any person with this company domain in our system so we can't efficiently predict their email address.")
+      expect(lambda { Pattern.for_person(@barack) }).to raise_error("Sorry, we don't have any person with this company domain in our system so we can't efficiently predict their email address.")
     end
   end
 end

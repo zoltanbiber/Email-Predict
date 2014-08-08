@@ -15,6 +15,13 @@ sample_dataset = {
   "Steve Jobs" => "s.j@apple.com"
 }
 
+to_predict = {
+  "Peter Wong" => "alphasights.com",
+  "Craig Silverstein" => "google.com",
+  "Steve Wozniak" => "apple.com",
+  "Barack Obama" => "whitehouse.gov"
+}
+
 class Person
 
   attr_accessor :first_name
