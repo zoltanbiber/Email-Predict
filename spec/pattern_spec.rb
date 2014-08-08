@@ -19,8 +19,8 @@ describe Pattern do
 
   describe "google.com" do
     it "should use the two right algorithms" do
-      expect(Pattern.for_person(@craig)).to be_an_instance_of(FirstNameDotLastInitial, FirstInitialDotLastName)
-      # expect(Pattern.for_person(@craig)).to be_an_instance_of(FirstInitialDotLastName)
+      expect(Pattern.for_person(@craig)[0]).to be_an_instance_of(FirstNameDotLastInitial)
+      expect(Pattern.for_person(@craig)[1]).to be_an_instance_of(FirstInitialDotLastName)
     end
   end
 
