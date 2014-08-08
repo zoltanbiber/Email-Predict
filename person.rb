@@ -1,5 +1,4 @@
 # represent a Person or Email in an object-oriented approach
-# write four methods that take 'name' and 'domain' arguments and return an email address
 # write unit tests for methods in a TDD approach
 # put the sample dataset into the file to see which company uses which algorithm
 # ask the user to input the advisor's name and company domain
@@ -23,7 +22,8 @@ class Person
   attr_accessor :domain
 
   def predict_email
-    self.first_name.downcase + "." + self.last_name.downcase + "@" + self.domain.downcase
+    Pattern.for_person(self)
   end
 
 end
+
