@@ -50,7 +50,7 @@ describe Person do
     end
 
     it "should predict email based on person's name and domain" do
-      expect {@barack.predict_email}.to raise_error("Sorry, we don't have any person with this company domain in our system so we can't efficiently predict their email address.")
+      expect {@barack.predict_email}.to raise_error(Exception)
     end
   end
 
