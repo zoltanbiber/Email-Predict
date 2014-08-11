@@ -11,7 +11,7 @@ describe Person do
     end
 
     it "should predict email based on person's name and domain" do
-      expect(@peter.predict_email).to eq("peter.wong@alphasights.com")
+      expect(@peter.predict_email).to eq(["peter.wong@alphasights.com"])
     end
   end
 
@@ -37,7 +37,7 @@ describe Person do
     end
 
     it "should predict email based on person's name and domain" do
-      expect(@steve.predict_email).to eq("s.w@apple.com")
+      expect(@steve.predict_email).to eq(["s.w@apple.com"])
     end
   end
 
